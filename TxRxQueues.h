@@ -16,4 +16,4 @@ void init_Queue(struct qRecord*, char*, int);
 int enqueue(char character, struct qRecord*);
 int dequeue(char*, struct qRecord*);
 
-#endif Tx_Rx_Queue
+#endif
