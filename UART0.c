@@ -47,10 +47,9 @@ void init_UART0_IRQ() {
 	UART0->S1 = UART0_S1_CLEAR_FLAGS;
 	UART0->S2 = UART0_S2_NO_RXINV_BRK10_NO_LBKDETECT_CLEAR_FLAGS;
 	UART0->C2 = UART0_C2_T_RI; /* enable UART0 */
-
 }
 
-void UART0_IRQ(){
+void UART0_IRQHandler(){
 	__asm("CPSID I");
 	if(UART0->C2 & UART0_C2_TIE_MASK){
 		if(UART0->S1 & UART0_S1_TDRE_MASK){
@@ -89,6 +88,3 @@ void putChar(const char character) {
 
 	UART0->C2 = UART0_C2_TI_RI;
 }
-
-
-
