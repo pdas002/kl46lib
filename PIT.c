@@ -6,7 +6,7 @@
 #include "MKL46Z4.h"
 #include "PIT.h"
 
-int timer = 0;
+uint32_t timer = 0;
 
 void PIT_setStrtVal(int periodms){
 	switch (periodms) {
@@ -38,7 +38,7 @@ void PIT_IRQHandler(){
 	__asm("CPSIE I");
 }
 
-int PIT_readTime(){
+uint32_t PIT_readTime(){
 	return timer;
 }
 
@@ -64,5 +64,3 @@ void init_PIT_IRQ(int periodms){
 	/* Enable PIT module with freeze during debugging */
 	PIT->MCR = PIT_MCR_MDIS_FRZ_EN_MASK;
 }
-
-
