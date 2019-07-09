@@ -8,7 +8,7 @@
 
 uint32_t timer = 0;
 
-void PIT_setStrtVal(int periodms){
+void PIT_setStrtVal(uint32_t periodms){
 	switch (periodms) {
 	case 100:
 		PIT->CHANNEL[0].LDVAL = PIT_PERIOD_100ms;
@@ -47,7 +47,7 @@ void PIT_start(){
 	PIT->CHANNEL[0].TCTRL = PIT_TCTRL_TIMER_I_EN;
 }
 
-void init_PIT_IRQ(int periodms){
+void init_PIT_IRQ(uint32_t periodms){
 
 	/* Enable clock for PIT */
 	SIM->SCGC6 |= SIM_SCGC6_PIT_MASK;

@@ -17,10 +17,10 @@
 #define PIT_PERIOD_1000ms 		(0x1742A63)
 #define PIT_PERIOD_10000ms 		(0xE89A7E7)
 
-void PIT_setStrtVal(int periodms);
+void PIT_setStrtVal(uint32_t periodms);
 void PIT_restart();
 void PIT_start();
-int PIT_readTime();
-void init_PIT_IRQ(int periodms);
+uint32_t PIT_readTime();
+void init_PIT_IRQ(uint32_t periodms);
 
 #endif
