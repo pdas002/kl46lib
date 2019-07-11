@@ -10,7 +10,7 @@ struct SGPIO{
 	uint8_t dir;
 };
 
-uint8_t init_GPIO(struct SGPIO **pininfo, uint8_t numPins);
+uint8_t init_GPIO(struct SGPIO pininfo[], uint8_t numPins);
 uint8_t GPIO_write(struct SGPIO *pininfo, uint8_t val);
 uint8_t GPIO_read(struct SGPIO *pininfo);
 
