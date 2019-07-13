@@ -20,10 +20,8 @@
 #define RTC_IPR_REGISTER 		(5)
 
 
-#define NVIC_IPR_RTC_ALARM_MASK \
-                      (3 << (((RTC_ALARM_NVIC_IRQ & 3) << 3) + 6))
-#define NVIC_IPR_RTC_SEC_MASK \
-                      (3 << (((RTC_SEC_NVIC_IRQ & 3) << 3) + 6))
+#define NVIC_IPR_RTC_ALARM_MASK		(3 << (((RTC_ALARM_NVIC_IRQ & 3) << 3) + 6))
+#define NVIC_IPR_RTC_SEC_MASK 		(3 << (((RTC_SEC_NVIC_IRQ & 3) << 3) + 6))
 
 #define RTC_CR_CLK_OSC_WK 		(RTC_CR_CLKO_MASK | RTC_CR_OSCE_MASK | RTC_CR_WPE_MASK)
 

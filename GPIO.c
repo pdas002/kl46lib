@@ -73,19 +73,19 @@ uint8_t GPIO_write(struct SGPIO *pininfo, uint8_t val) {
 							(1u << pin));
 				break;
 			case 'b':
-				val ? (FPTA->PSOR |= (1u << pin)) : (FPTA->PCOR |=
+				val ? (FPTB->PSOR |= (1u << pin)) : (FPTB->PCOR |=
 							(1u << pin));
 				break;
 			case 'c':
-				val ? (FPTA->PSOR |= (1u << pin)) : (FPTA->PCOR |=
+				val ? (FPTC->PSOR |= (1u << pin)) : (FPTC->PCOR |=
 							(1u << pin));
 				break;
 			case 'd':
-				val ? (FPTA->PSOR |= (1u << pin)) : (FPTA->PCOR |=
+				val ? (FPTD->PSOR |= (1u << pin)) : (FPTD->PCOR |=
 							(1u << pin));
 				break;
 			case 'e':
-				val ? (FPTA->PSOR |= (1u << pin)) : (FPTA->PCOR |=
+				val ? (FPTE->PSOR |= (1u << pin)) : (FPTE->PCOR |=
 							(1u << pin));
 				break;
 			default:
